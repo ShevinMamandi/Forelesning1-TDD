@@ -4,12 +4,17 @@ import static org.junit.Assert.assertEquals;
 
 public class TestClass {
 
+    RomanNrConverter converter;
     @Test
     public void shouldConvert1ToI() {
-        assertEquals("I", toRoman(1));
+        converter = new RomanNrConverter();
+        assertEquals("I", converter.toRoman(1));
     }
 
-    private String toRoman(int i) {
-        return "";
+    @Test
+    public  void shouldConvert2ToII(){
+        converter = new RomanNrConverter();
+        assertEquals("II",converter.toRoman(2));
+
     }
 }
